@@ -1,1 +1,250 @@
-theme: jekyll-theme-cayman
+from tkinter import *
+import math,random,time
+
+
+LARGEUR = 500
+HAUTEUR =400
+RAYON = 15 # rayon de la balle
+
+nVerte=int(input('Vert'))
+
+nRouge=int(input('Rouge'))
+
+Prob=int(input('Probabilité de collision (entre 1 et 300)'))
+
+Pression=float(input('Pression, en bars (entre 1 et 10)'))
+
+Temperature=float(input('Température'))
+
+vit=0
+
+if 0<=Pression<1:
+    vit=random.uniform(0.6,0.8)
+if 1<=Pression<2:
+    vit=random.uniform(0.8,1)
+if 2<=Pression<3:
+    vit=random.uniform(1,1.2)
+if 3<=Pression<4:
+    vit=random.uniform(1,1.2)
+if 4<=Pression<5:
+    vit=random.uniform(1.2,1.4)
+if 5<=Pression<6:
+    vit=random.uniform(1.4,1.6)
+if 6<=Pression<7:
+    vit=random.uniform(1.6,1.8)
+if 7<=Pression<8:
+    vit=random.uniform(1.8,2)
+if 8<=Pression<9:
+    vit=random.uniform(2,2.2)
+if 9<=Pression<=10:
+    vit=random.uniform(2.2,2.4)
+
+
+
+tp=0
+
+if -50<=Temperature<0:
+    tp = random.uniform(0.0,0.2)
+if 0<=Temperature<50:
+    tp = random.uniform(0.2,0.4)
+if 50<=Temperature<100:
+    tp = random.uniform(0.4,0.6)
+if 100<=Temperature<150:
+    tp = random.uniform(0.6,0.8)
+if 200<=Temperature<150:
+    tp = random.uniform(0.8,1)
+
+# position initiale
+Xr = []
+Yr= []
+for i in range(nRouge):
+    Xr.append(LARGEUR*random.uniform(0.1,0.9))
+    Yr.append(HAUTEUR*random.uniform(0.1,0.9))
+
+
+# direction initiale aleatoire
+DXr = []
+DYr = []
+for i in range(nRouge):
+    vitesse = random.uniform(1.8,2)*vit
+    angle = random.uniform(0,2*math.pi)
+    DXr.append(vitesse*math.cos(angle))
+    DYr.append(vitesse*math.sin(angle))
+
+def deplacement1r():
+    """ Deplacement de la balle """
+    global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
+
+    for i in range(nRouge):
+
+        if Xr[i]+RAYON+DXr[i] > LARGEUR:
+            Xr[i] = 2*(LARGEUR-RAYON)-Xr[i]
+            DXr[i] = -DXr[i]
+
+        # rebond a gauche
+        if Xr[i]-RAYON+DXr[i] < 0:
+            Xr[i] = 2*RAYON-Xr[i]
+            DXr[i] = -DXr[i]
+
+
+        # rebond en bas
+        if Yr[i]+RAYON+DYr[i] > HAUTEUR:
+            Yr[i] = 2*(HAUTEUR-RAYON)-Yr[i]
+            DYr[i] = -DYr[i]
+
+        # rebond en haut
+        if Yr[i]-RAYON+DYr[i] < 0:
+            Yr[i] = 2*RAYON-Yr[i]
+            DYr[i] = -DYr[i]
+
+
+
+        Xr[i] = Xr[i]+DXr[i]
+        Yr[i] = Yr[i]+DYr[i]
+
+
+
+        # affichage
+        Canevas.coords(BallesRouges[i],Xr[i]-RAYON,Yr[i]-RAYON,Xr[i]+RAYON,Yr[i]+RAYON)
+
+
+# position initiale
+xv = []
+yv = []
+for j in range(nVerte):
+    xv.append(LARGEUR*random.uniform(0.1,0.9))
+    yv.append(HAUTEUR*random.uniform(0.1,0.9))
+
+
+# direction initiale aleatoire
+Dxv = []
+Dyv = []
+for j in range(nVerte):
+    vitesse = random.uniform(1.8,2)*vit
+    angle = random.uniform(0,2*math.pi)
+    Dxv.append(vitesse*math.cos(angle))
+    Dyv.append(vitesse*math.sin(angle))
+
+def deplacement2():
+    """ Deplacement de la balle """
+    global xv,yv,Dxv,Dyv,RAYON,LARGEUR,HAUTEUR
+
+    for j in range(nVerte):
+
+        if xv[j]+RAYON+Dxv[j] > LARGEUR:
+            xv[j] = 2*(LARGEUR-RAYON)-xv[j]
+            Dxv[j] = -Dxv[j]
+
+        # rebond a gauche
+        if xv[j]-RAYON+Dxv[j] < 0:
+            xv[j] = 2*RAYON-xv[j]
+            Dxv[j] = -Dxv[j]
+
+
+        # rebond en bas
+        if yv[j]+RAYON+Dyv[j] > HAUTEUR:
+            yv[j] = 2*(HAUTEUR-RAYON)-yv[j]
+            Dyv[j] = -Dyv[j]
+
+        # rebond en haut
+        if yv[j]-RAYON+Dyv[j] < 0:
+            yv[j] = 2*RAYON-yv[j]
+            Dyv[j] = -Dyv[j]
+
+
+
+
+        xv[j] = xv[j]+Dxv[j]
+        yv[j] = yv[j]+Dyv[j]
+
+
+
+        # affichage
+        Canevas.coords(BallesVertes[j],xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON)
+
+
+
+def collision():
+    global xv,yv,Dxv,Dyv,RAYON,LARGEUR,HAUTEUR,Xr,Yr,DXr,DYr
+    b=True
+    p=0
+    while b:
+        b=False
+        for i in range(len(BallesRouges)):
+            if (b):
+                break
+            for j in range(len(BallesVertes)):
+                p=random.uniform(0,3)
+
+
+                if math.sqrt((Xr[i]-xv[j])**2+(Yr[i]-yv[j])**2)<=2*RAYON :
+                     if  (1/Prob)<p<((1/Prob)+2):
+
+                        Canevas.delete(BallesRouges[i])
+                        Canevas.delete(BallesVertes[j])
+
+                        BallesBleues.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='blue'))
+                        del BallesVertes[j]
+                        del BallesRouges[i]
+
+
+                        b=False
+
+                     else:
+                        Dxv[j]=-Dxv[j]
+                        DXr[i]=-DXr[i]
+                        Dyv[j]=-Dyv[j]
+                        DYr[i]=-DYr[i]
+
+
+                     break
+
+
+
+
+def transformation():
+    global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
+
+    for c in range (len(BallesBleues)):
+        t=random.expovariate(0.2)
+        if tp-0.1<t<tp+0.1:
+
+            Canevas.delete(BallesBleues[c])
+            del BallesBleues[c]
+
+            BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
+            BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
+
+
+
+
+    Mafenetre.after(5,collision)
+    Mafenetre.after(5,deplacement2)
+    Mafenetre.after(5,deplacement1r)
+    Mafenetre.after(5,transformation)
+
+
+Mafenetre = Tk()
+Mafenetre.title("Animation BallesVertes")
+
+# Creation d'un widget Canva
+Canevas = Canvas(Mafenetre,height=HAUTEUR,width=LARGEUR,bg='white')
+Canevas.pack(padx=5,pady=5)
+
+# Creation d'un objet graphiqu
+BallesVertes=[]
+for j in range(nVerte):
+    BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
+BallesRouges=[]
+for i in range(nRouge):
+    BallesRouges.append(Canevas.create_oval(Xr[i]-RAYON,Yr[i]-RAYON,Xr[i]+RAYON,Yr[i]+RAYON,width=1,fill='red'))
+
+BallesBleues=[]
+
+deplacement1r()
+deplacement2()
+collision()
+transformation()
+
+
+Mafenetre.mainloop()
