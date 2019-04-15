@@ -74,7 +74,7 @@ Notre programme s’est construit autour de différentes fonction dont l’objec
 Pour répondre à cela nous avons créé la fonction déplacement qui va modéliser la position de N balles (N choisit par l’utilisateur) à partir de sa vitesse et direction initial tout en tenant compte des rebonds sur les parois.  
 
 
-	position initiale
+	'''position initiale
  	X = []
 	Y = []
 	for i in range(n):
@@ -116,7 +116,7 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 	DY[i] = -DY[i]
 
 	X[i] = X[i]+DX[i]
-	Y[i] = Y[i]+DY[i]
+	Y[i] = Y[i]+DY[i]'''
 	
 <a href="https://imgflip.com/gif/2ynpvo"><img src="https://i.imgflip.com/2ynpvo.gif" title="made at imgflip.com"/></a>
 
