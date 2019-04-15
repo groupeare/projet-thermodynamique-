@@ -134,7 +134,7 @@ En cas de collision deux situations peuvent alors avoir lieu : un rebond, autrem
  	Dyv[j]=-Dyv[j]
  	DYr[i]=-DYr[i]
 
-![](https://imgflip.com/gif/2yno4i)
+![](https://imgflip.com/gif/2yno4i.gif)
 
 Dans le cas contraire cela signifie que les éléments chimiques ont réagis entre eux pour former un autre élément, pour modéliser cette situation on fait disparaitre les deux boules en collision et on fait apparaitre une nouvelle boule à leur position.
 
