@@ -33,7 +33,7 @@ En effet les masses étant constantes et les chocs étant élastiques il existe 
 -Le deuxième phénomène physique est la fission nucléaire :
 La fission nucléaire est l'éclatement d'un noyau instable en deux noyaux plus légers et quelques particules élémentaires. Cet éclatement s'accompagne d'un dégagement de chaleur, c'est à dire d'énergie.
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/3a/Kernspaltung.gif)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kernspaltung.gif/208px-Kernspaltung.gif)
 
 Notre modèle s’inspire des deux principes évoqués ci dessus : 
 Dans notre modèle nous avons fait l’hypothèse que les particules dans le système pouvaient former une autre molécule après une collision. 
