@@ -58,7 +58,7 @@ Afin de représenter cela nous avons décidé de laisser le choix de la tempéra
 
 
 
-            Analyse du programme
+	# Analyse du programme
 
 L’objectif de notre programme était de modéliser une l’évolution de deux éléments chimique, susceptibles de réagir ensemble, dans un espace clos. 
 Les éléments chimiques sont représentés par des boules de différentes de couleurs, les boules rouges et vertes sont les réactifs et les boules bleus les produits, et le lieu de la réaction une fenêtre de dimension 480x320.
@@ -71,35 +71,36 @@ Notre programme s’est construit autour de différentes fonction dont l’objec
 
 Pour répondre à cela nous avons créé la fonction déplacement qui va modéliser la position de N balles (N choisit par l’utilisateur) à partir de sa vitesse et direction initial tout en tenant compte des rebonds sur les parois.  
 
-# position initiale
-X = []
-Y = []
-for i in range(n):
-X.append(LARGEUR*random.uniform(0.1,0.9))
-Y.append(HAUTEUR*random.uniform(0.1,0.9))
+
+	position initiale
+ 	X = []
+	Y = []
+	for i in range(n):
+	X.append(LARGEUR*random.uniform(0.1,0.9))
+	Y.append(HAUTEUR*random.uniform(0.1,0.9))
 
 
-# direction initiale aleatoire
-DX = []
-DY = []
-for i in range(n):
-vitesse = random.uniform(1.8,2)*5
-angle = random.uniform(0,2*math.pi)
-DX.append(vitesse*math.cos(angle))
-DY.append(vitesse*math.sin(angle))
+	direction initiale aleatoire
+	DX = []
+	DY = []
+	for i in range(n):
+	vitesse = random.uniform(1.8,2)*5
+	angle = random.uniform(0,2*math.pi)
+	DX.append(vitesse*math.cos(angle))
+	DY.append(vitesse*math.sin(angle))
 
-def deplacement():
-""" Deplacement de la balle """
-global X,Y,DX,DY,RAYON,LARGEUR,HAUTEUR
+	def deplacement():
+	""" Deplacement de la balle """
+	global X,Y,DX,DY,RAYON,LARGEUR,HAUTEUR
 
-for i in range(n):
-if X[i]+RAYON+DX[i] > LARGEUR:
-X[i] = 2*(LARGEUR-RAYON)-X[i]
-DX[i] = -DX[i]
+	for i in range(n):
+	if X[i]+RAYON+DX[i] > LARGEUR:
+	X[i] = 2*(LARGEUR-RAYON)-X[i]
+	DX[i] = -DX[i]
 
-# rebond a gauche
-if X[i]-RAYON+DX[i] < 0:
-X[i] = 2*RAYON-X[i]
+	rebond< a gauche
+	if X[i]-RAYON+DX[i] < 0:
+	X[i] = 2*RAYON-X[i]
 DX[i] = -DX[i]
 
 # rebond en bas
