@@ -58,7 +58,7 @@ Afin de représenter cela nous avons décidé de laisser le choix de la tempéra
 
 
 
-	# Analyse du programme
+# Analyse du programme
 
 L’objectif de notre programme était de modéliser une l’évolution de deux éléments chimique, susceptibles de réagir ensemble, dans un espace clos. 
 Les éléments chimiques sont représentés par des boules de différentes de couleurs, les boules rouges et vertes sont les réactifs et les boules bleus les produits, et le lieu de la réaction une fenêtre de dimension 480x320.
@@ -101,20 +101,20 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 	rebond< a gauche
 	if X[i]-RAYON+DX[i] < 0:
 	X[i] = 2*RAYON-X[i]
-DX[i] = -DX[i]
+	DX[i] = -DX[i]
 
-# rebond en bas
-if Y[i]+RAYON+DY[i] > HAUTEUR:
-Y[i] = 2*(HAUTEUR-RAYON)-Y[i]
-DY[i] = -DY[i]
+	rebond en bas
+	if Y[i]+RAYON+DY[i] > HAUTEUR:
+	Y[i] = 2*(HAUTEUR-RAYON)-Y[i]
+	DY[i] = -DY[i]
 
-# rebond en haut
-if Y[i]-RAYON+DY[i] < 0:
-Y[i] = 2*RAYON-Y[i]
-DY[i] = -DY[i]
+	rebond en haut
+	if Y[i]-RAYON+DY[i] < 0:
+	Y[i] = 2*RAYON-Y[i]
+	DY[i] = -DY[i]
 
-X[i] = X[i]+DX[i]
-Y[i] = Y[i]+DY[i]
+	X[i] = X[i]+DX[i]
+	Y[i] = Y[i]+DY[i]
 En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
 
@@ -122,21 +122,21 @@ En répétant cette fonction dans notre programme et en créant une nouvelle lis
 
 On parle de collision lorsque la distance entre deux boules est inférieure à leur rayon c’est-à-dire que cela répond à cette condition :
 
-math.sqrt((Xr[i]-xv[j])**2+(Yr[i]-yv[j])**2)<=2*
+					math.sqrt((Xr[i]-xv[j])**2+(Yr[i]-yv[j])**2)<=2*
 
 En cas de collision deux situations peuvent alors avoir lieu : un rebond, autrement dit chaque balle part dans sa direction opposée. Sur le programme on exprime cela de la manière suivante :
 
-Dxv[j]=-Dxv[j]
- DXr[i]=-DXr[i]
- Dyv[j]=-Dyv[j]
- DYr[i]=-DYr[i]
+	Dxv[j]=-Dxv[j]
+ 	DXr[i]=-DXr[i]
+ 	Dyv[j]=-Dyv[j]
+ 	DYr[i]=-DYr[i]
 
 
 Dans le cas contraire cela signifie que les éléments chimiques ont réagis entre eux pour former un autre élément, pour modéliser cette situation on fait disparaitre les deux boules en collision et on fait apparaitre une nouvelle boule à leur position.
 
 	Canevas.delete(BallesRouges[i])
-  Canevas.delete(BallesVertes[j])
-BallesBleues.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='blue'))
+  	Canevas.delete(BallesVertes[j])
+	BallesBleues.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='blue'))
                         del BallesVertes[j]
                         del BallesRouges[i]
 
@@ -150,18 +150,18 @@ Ces deux cas de figures interviennent selon une certaine probabilité détermine
 Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée de vie n’est pas infini, en effet sa durée de vie est limitée et il va se désintégrer pour redonner les deux éléments initiaux.  Du point de vue de notre programme nous avons modélisé ce phénomène par le fait qu’au bout d’une durée t la boule bleue allait disparaitre et les boules rouges et vertes réapparaitre.
 
 
-def fission():
+	def fission():
     global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
 
-  for c in range (len(BallesBleues)):
+  	for c in range (len(BallesBleues)):
         t=random.expovariate(0.2)
         if tp-0.1<t<tp+0.1:
 
-   Canevas.delete(BallesBleues[c])
+ 	  Canevas.delete(BallesBleues[c])
           del BallesBleues[c]
 
-  BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
-  BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
+	  BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
+ 	 BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
 
 
 
