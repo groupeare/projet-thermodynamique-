@@ -120,6 +120,7 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 	
 <a href="https://imgflip.com/gif/2ynpvo"><img src="https://i.imgflip.com/2ynpvo.gif" title="made at imgflip.com"/></a>
 
+
 En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
 
@@ -138,6 +139,7 @@ En cas de collision deux situations peuvent alors avoir lieu : un rebond, autrem
 
 <a href="https://imgflip.com/gif/2ynpfx"><img src="https://i.imgflip.com/2ynpfx.gif" title="made at imgflip.com"/></a>
 
+
 Dans le cas contraire cela signifie que les éléments chimiques ont réagis entre eux pour former un autre élément, pour modéliser cette situation on fait disparaitre les deux boules en collision et on fait apparaitre une nouvelle boule à leur position.
 
 	Canevas.delete(BallesRouges[i])
@@ -148,6 +150,7 @@ Dans le cas contraire cela signifie que les éléments chimiques ont réagis ent
 
 
 <a href="https://imgflip.com/gif/2ynq67"><img src="https://i.imgflip.com/2ynq67.gif" title="made at imgflip.com"/></a>
+
 Ces deux cas de figures interviennent selon une certaine probabilité déterminer par les facteurs cinétiques choisit au départ.
 
 
@@ -168,5 +171,50 @@ Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée
 
 
 ### l'influence de la Pression et la Temperature
-Enfin les facteurs cinétiques Pression et Température qui sont des variables choisit par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
+Enfin les facteurs cinétiques Pression et Température qui sont des variables choisis par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
+
+vit=0
+
+''' if 0<=Pression<1:
+    vit=random.uniform(0.6,0.8)
+if 1<=Pression<2:
+    vit=random.uniform(0.8,1)
+if 2<=Pression<3:
+    vit=random.uniform(1,1.2)
+if 3<=Pression<4:
+    vit=random.uniform(1,1.2)
+if 4<=Pression<5:
+    vit=random.uniform(1.2,1.4)
+if 5<=Pression<6:
+    vit=random.uniform(1.4,1.6)
+if 6<=Pression<7:
+    vit=random.uniform(1.6,1.8)
+if 7<=Pression<8:
+    vit=random.uniform(1.8,2)
+if 8<=Pression<9:
+    vit=random.uniform(2,2.2)
+if 9<=Pression<=10:
+    vit=random.uniform(2.2,2.4)'''
+
+
+
+''' tp=0
+
+if -50<=Temperature<0:
+    tp = random.uniform(0.0,0.2)
+if 0<=Temperature<50:
+    tp = random.uniform(0.2,0.4)
+if 50<=Temperature<100:
+    tp = random.uniform(0.4,0.6)
+if 100<=Temperature<150:
+    tp = random.uniform(0.6,0.8)
+if 200<=Temperature<150:
+    tp = random.uniform(0.8,1)'''
+
+<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
+
+
+
+
+<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
 
