@@ -69,7 +69,7 @@ Dans notre programme nous avons arbitrairement choisit le rayon des boules et de
 Notre programme s’est construit autour de différentes fonction dont l’objectif étaient de symboliser les étapes clefs suivantes :
 
 
-•	Le déplacement de chaque élément chimique dans un espace clos en 2D
+### Le déplacement de chaque élément chimique dans un espace clos en 2D
 
 Pour répondre à cela nous avons créé la fonction déplacement qui va modéliser la position de N balles (N choisit par l’utilisateur) à partir de sa vitesse et direction initial tout en tenant compte des rebonds sur les parois.  
 
@@ -123,7 +123,7 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
 
-•	La collision de deux éléments chimiques différents 
+### La collision de deux éléments chimiques différents 
 
 On parle de collision lorsque la distance entre deux boules est inférieure à leur rayon c’est-à-dire que cela répond à cette condition :
 
@@ -152,7 +152,7 @@ Ces deux cas de figures interviennent selon une certaine probabilité détermine
 
 
 
-•	La fission d’un élément chimique 
+### La fission d’un élément chimique 
 Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée de vie n’est pas infini, en effet sa durée de vie est limitée et il va se désintégrer pour redonner les deux éléments initiaux.  Du point de vue de notre programme nous avons modélisé ce phénomène par le fait qu’au bout d’une durée t la boule bleue allait disparaitre et les boules rouges et vertes réapparaitre.
 
 
@@ -167,6 +167,6 @@ Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée
  	 	BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
 
 
-
-•	Enfin les facteurs cinétiques Pression et Température qui sont des variables choisit par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
+### l'influence de la Pression et la Temperature
+Enfin les facteurs cinétiques Pression et Température qui sont des variables choisit par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
 
