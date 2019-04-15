@@ -154,18 +154,18 @@ Ces deux cas de figures interviennent selon une certaine probabilité détermine
 Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée de vie n’est pas infini, en effet sa durée de vie est limitée et il va se désintégrer pour redonner les deux éléments initiaux.  Du point de vue de notre programme nous avons modélisé ce phénomène par le fait qu’au bout d’une durée t la boule bleue allait disparaitre et les boules rouges et vertes réapparaitre.
 
 
-	def fission():
-    global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
+		def fission():
+    		global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
 
-  	for c in range (len(BallesBleues)):
-        t=random.expovariate(0.2)
-        if tp-0.1<t<tp+0.1:
+  		for c in range (len(BallesBleues)):
+        	t=random.expovariate(0.2)
+        	if tp-0.1<t<tp+0.1:
 
- 	  Canevas.delete(BallesBleues[c])
-          del BallesBleues[c]
+ 		Canevas.delete(BallesBleues[c])
+        	del BallesBleues[c]
 
-	  BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
- 	 BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
+		BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
+ 	 	BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
 
 
 
