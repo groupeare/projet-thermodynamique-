@@ -211,14 +211,9 @@ La vitesse des particules augmente avec la pression.
 			    tp = random.uniform(0.6,0.8)
 			if 200<=Temperature<150:
 			    tp = random.uniform(0.8,1)
+			    
 La temperature augmente la probabilité d'avoir une transformation lors d'une collision 
 
-<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
-
-
-
-
-<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
 
 # Resultats obtenus
 
