@@ -115,6 +115,8 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 
 	X[i] = X[i]+DX[i]
 	Y[i] = Y[i]+DY[i]
+	
+![](gif 2 balles)
 En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
 
@@ -166,3 +168,4 @@ Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée
 
 
 •	Enfin les facteurs cinétiques Pression et Température qui sont des variables choisit par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
+
