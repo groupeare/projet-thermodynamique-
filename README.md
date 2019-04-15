@@ -1,14 +1,13 @@
-A travers cet atelier de recherche encadré Dynamic nous avons cherché à modeliser l'evolution complexe d'un systeme composé de plusieurs  élements chimiques dont le deplacement est régit par les lois de la thermodynamique . Pour cela nous avons imaginé deux elements chimiques succeptibles de réagir entre eux pour forthmer un nouvel element, ces elements chimiques peuvent etre assimilés à n'importe quels atomes ou molecules( par exemple dihydrogene H2 et oxygene O pour former de l'eau H2O).
+A travers cet atelier de recherche encadré Dynamic nous avons cherché à modeliser l'evolution complexe d'un système composé de plusieurs  élements chimiques dont le déplacement est régit par les lois de la thermodynamique. Pour cela nous avons imaginé deux élements chimiques succeptibles de réagir entre eux pour former un nouvel élement, ces élements chimiques peuvent etre assimilés à n'importe quels atomes ou molecules( par exemple dihydrogene H2 et oxygene O pour former de l'eau H2O).
 
-La formation d'un  nouvel element chimique n'est pas évidente. En effet, il faut tout d'abord que les deux elements chimiques entre en collision  et il faut de plus que leur collision soit "efficace" car ce n'est pas parce qu'ils entrent en contact qu'ils vont forcement reagir.
+La formation d'un  nouvel élement chimique n'est pas évidente. En effet, il faut tout d'abord que les deux élements chimiques entre en collision  et il faut de plus que leur collision soit "efficace" car ce n'est pas parce qu'ils entrent en contact qu'ils vont forcement réagir.
 
-Pour modeliser ce systeme nous faisons intervenir differentes variables : la pression et la temperature, ces deux facteurs cinetiques vont avoir une influence sur la vitesse des elements chimiques et sur leur probabilités de reagir lorsqu'il y a une collision.
-Nous avons choisi de mettre les elements chimiques dans un espace clos et de considerer que les chocs entre eux et sur les parois sont elastiques c'est a dire qu'il n'y a pas de perte de vitesse. 
+Pour modéliser ce système nous faisons intervenir differentes variables : la pression et la temperature, ces deux facteurs cinetiques vont avoir une influence sur la vitesse des élements chimiques et sur leurs probabilités de réagir lorsqu'il y a une collision.
+Nous avons choisi de mettre les élements chimiques dans un espace clos et de considérer que les chocs entre eux et sur les parois sont élastiques c'est à dire qu'il n'y a pas de perte de vitesse. 
 
 # approche theorique 
 
-Dans notre modèle nous considérons un système à deux dimensions dans lequel on place N molécules. Ces molécules constituent un gaz qui n’est pas parfait car il en détient toutes les caractéristiques sauf une.
-En effet un gaz parfait est constitué de particules qui n’interagissent pas entres elles.
+Dans notre modèle nous considérons un système à deux dimensions dans lequel on place N molécules. Ces molécules constituent un gaz qui n’est pas parfait car il est constitué de particules qui peuvent interragir entres elles.
 
 Il s’agit d’observer l’évolution du modèle en fonctions de caractères cinétiques.
 Dans le domaine de la chimie, un facteur cinétique désigne un paramètre physique capable d'influencer la vitesse d'une transformation chimique.
@@ -62,16 +61,16 @@ Afin de représenter cela nous avons décidé de laisser le choix de la tempéra
 
 # Analyse du programme
 
-L’objectif de notre programme était de modéliser une l’évolution de deux éléments chimique, susceptibles de réagir ensemble, dans un espace clos. 
-Les éléments chimiques sont représentés par des boules de différentes de couleurs, les boules rouges et vertes sont les réactifs et les boules bleus les produits, et le lieu de la réaction une fenêtre de dimension 480x320.
+L’objectif de notre programme était de modéliser l’évolution d'éléments chimiques, susceptibles de réagir ensemble, dans un espace clos. 
+Les éléments chimiques sont représentés par des boules de différentes couleurs, les boules rouges et vertes sont les réactifs et les boules bleus les produits, le lieu de la réaction est  une fenêtre de dimension 480x320.
 
-Dans notre programme nous avons arbitrairement choisit le rayon des boules et de la fenêtre mais l’utilisateur peut le modifier s’il le souhaite.  Afin d’afficher cela nous a utilisé la bibliothèque tkinter de python 3.  
-Notre programme s’est construit autour de différentes fonction dont l’objectif étaient de symboliser les étapes clefs suivantes :
+Dans notre programme nous avons arbitrairement choisi le rayon des boules et de la fenêtre mais l’utilisateur peut le modifier s’il le souhaite. Afin d’afficher cela nous avons utilisé la bibliothèque tkinter de python 3.  
+Notre programme se construit autour de différentes fonction dont l’objectif est de symboliser les étapes clefs suivantes :
 
 
 ### Le déplacement de chaque élément chimique dans un espace clos en 2D
 
-Pour répondre à cela nous avons créé la fonction déplacement qui va modéliser la position de N balles (N choisit par l’utilisateur) à partir de sa vitesse et direction initial tout en tenant compte des rebonds sur les parois.  
+Pour répondre à cela nous avons créé la fonction déplacement qui va modéliser la position de N balles (N choisit par l’utilisateur) à partir de sa vitesse et sa  direction initial tout en tenant compte des rebonds sur les parois.  
 
 
 	'''position initiale
@@ -121,14 +120,14 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 <a href="https://imgflip.com/gif/2ynpvo"><img src="https://i.imgflip.com/2ynpvo.gif" title="made at imgflip.com"/></a>
 
 
-En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
+En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer une nouvelle liste de boule de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
 
 ### La collision de deux éléments chimiques différents 
 
 On parle de collision lorsque la distance entre deux boules est inférieure à leur rayon c’est-à-dire que cela répond à cette condition :
 
-					math.sqrt((Xr[i]-xv[j])**2+(Yr[i]-yv[j])**2)<=2*
+				math.sqrt((Xr[i]-xv[j])**2+(Yr[i]-yv[j])**2)<=2*RAYON
 
 En cas de collision deux situations peuvent alors avoir lieu : un rebond, autrement dit chaque balle part dans sa direction opposée. Sur le programme on exprime cela de la manière suivante :
 
@@ -156,6 +155,7 @@ Ces deux cas de figures interviennent selon une certaine probabilité détermine
 
 
 ### La fission d’un élément chimique 
+
 Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée de vie n’est pas infini, en effet sa durée de vie est limitée et il va se désintégrer pour redonner les deux éléments initiaux.  Du point de vue de notre programme nous avons modélisé ce phénomène par le fait qu’au bout d’une durée t la boule bleue allait disparaitre et les boules rouges et vertes réapparaitre.
 
 
@@ -171,50 +171,67 @@ Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée
 
 
 ### l'influence de la Pression et la Temperature
+
 Enfin les facteurs cinétiques Pression et Température qui sont des variables choisis par l’utilisateur en entrée vont déterminer le comportement général du système. En effet ces facteurs cinétiques vont avoir une influence d’un point de vue microscopique sur les éléments car ils déterminent leur vitesse la probabilité que leur collision entraine une transformation ainsi que la durée de vie du nouvel élément. 
 
-vit=0
+			vit=0
 
-''' if 0<=Pression<1:
-    vit=random.uniform(0.6,0.8)
-if 1<=Pression<2:
-    vit=random.uniform(0.8,1)
-if 2<=Pression<3:
-    vit=random.uniform(1,1.2)
-if 3<=Pression<4:
-    vit=random.uniform(1,1.2)
-if 4<=Pression<5:
-    vit=random.uniform(1.2,1.4)
-if 5<=Pression<6:
-    vit=random.uniform(1.4,1.6)
-if 6<=Pression<7:
-    vit=random.uniform(1.6,1.8)
-if 7<=Pression<8:
-    vit=random.uniform(1.8,2)
-if 8<=Pression<9:
-    vit=random.uniform(2,2.2)
-if 9<=Pression<=10:
-    vit=random.uniform(2.2,2.4)'''
+			if 0<=Pression<1:
+		    vit=random.uniform(0.6,0.8)
+			if 1<=Pression<2:
+		    vit=random.uniform(0.8,1)
+			if 2<=Pression<3:
+		    vit=random.uniform(1,1.2)
+			if 3<=Pression<4:
+		    vit=random.uniform(1,1.2)
+			if 4<=Pression<5:
+		    vit=random.uniform(1.2,1.4)
+			if 5<=Pression<6:
+		    vit=random.uniform(1.4,1.6)
+		if 6<=Pression<7:
+		    vit=random.uniform(1.6,1.8)
+		if 7<=Pression<8:
+		    vit=random.uniform(1.8,2)
+		if 8<=Pression<9:
+		    vit=random.uniform(2,2.2)
+		if 9<=Pression<=10:
+		    vit=random.uniform(2.2,2.4)'''
 
+La vitesse des particules augmente avec la pression.
 
+			 tp=0
 
-''' tp=0
-
-if -50<=Temperature<0:
-    tp = random.uniform(0.0,0.2)
-if 0<=Temperature<50:
-    tp = random.uniform(0.2,0.4)
-if 50<=Temperature<100:
-    tp = random.uniform(0.4,0.6)
-if 100<=Temperature<150:
-    tp = random.uniform(0.6,0.8)
-if 200<=Temperature<150:
-    tp = random.uniform(0.8,1)'''
-
-<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
-
-
-
+			if -50<=Temperature<0:
+			    tp = random.uniform(0.0,0.2)
+			if 0<=Temperature<50:
+			    tp = random.uniform(0.2,0.4)
+			if 50<=Temperature<100:
+			    tp = random.uniform(0.4,0.6)
+			if 100<=Temperature<150:
+			    tp = random.uniform(0.6,0.8)
+			if 200<=Temperature<150:
+			    tp = random.uniform(0.8,1)
+La temperature augmente la probabilité d'avoir une transformation lors d'une collision 
 
 <a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
 
+
+
+
+<a href="https://imgflip.com/gif/2ynxx9"><img src="https://i.imgflip.com/2ynxx9.gif" title="made at imgflip.com"/></a>
+
+# Resultats obtenus
+
+Ainsi le modèle établit nous a permis de mettre en évidence l’ensemble des propriétés des gaz décries auparavant. Nous avons donc pu établir la dynamique de notre système en se penchant sur la variation du nombre de molécule d’eau créée en fonction de ces différents facteurs cinétique. Le modèle informatique nous alors permis d’estimer une variation de la population de molécule engendrée sur un intervalle de temps à l’échelle humaine.
+
+A l’aide de courbes, nous avons  facilement analyser les données générées par notre programme pour répondre à notre problème. Le fait de faire varier deux paramètres dans notre modèle a un effet sur le pourcentage de molécule créé, en accord avec la théorie.
+En effet notre modèle permet à son utilisateur de faire varier pression et température sur deux intervalles donnés. On constate que lorsque la température augmente, sans changement de pression, il se formera un nombre plus importants de molécules, ce qui représente une accélération lors de la récation chimique entre les gaz.
+
+ Il en va de même pour la pression, celle-ci aura tendance a accentuer l’agitation des atomes de notre système qui formeront plus de molécules.
+Nous avons égalemet vu qu’il est interessant d’étudier notre système dans le cas d’une population d’atomes de base très élevée. Le nombre d’atomes au depart de l’experience aura un impact plus favorable à notre système si celui-ci est élevé. En effet plus les atomes seront proches les un des autres dans l’espace plus il y’aura de collision, fusion et fission selon les paramètres de base de notre système.
+
+Finalement notre système résultant d’un problème de thermodynamique nous a permis sur un intervalle de temps donné, d’estimer l’évolution du nombres de molécules selon différents facteurs cinétiques. De ce fait ce système peut également être applicable dans le cadre d’études portant sur la variation du nombre d’individu au sein d’une population dans un environnement propice à son développement ou non. Les critères sur l’environnement peuvent être assimilés à nos facteurs cinétiques, plus ceux-ci seront importants, plus le nombre d’individu augmentera même si la création d’un individu se fait de manière aléatoire. Ceci illustre bien la théorie des systèmes dynamiques, connaissant les lois d’évolution nous avons cherché à  prévoir le comportement effectif à temps longs de notre système.
+Cependant, notre modèle informatique est contraints à certaines limites, des facteurs internes et externes ne nous permettent pas de pousser à son termes notre modélisation.
+
+En effet, il ne nous était impossible de prendre en compte l’échelle atomique dans laquelle à lieu les réactions. Ces réactions sont à l’échelle atomique des centaines de fois plus rapides que sur notre modèle et mettent en jeux beaucoup plus d’atomes.
+De plus notre système ne peut agir sans l’aide de son utilisateur si celui-ci ne fixe pas un temps de réaction et ne peut donc pas décrire parfaitement une réaction chimique puisqu’il ne s’arrête pas de lui-même.
