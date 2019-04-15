@@ -28,9 +28,12 @@ Les chocs sont tous élastiques, il y a donc lors de l’évolution du système 
 Le cube est issue d’un axe orthonormée X, Y, Z dans lequel chaque particule a des positions initiales Vx, Vy, Vz. La théorie cinétique des gaz parfait met en évidence le fait qu’on peut établir des formules qui lient les caractères macroscopiques (pression, température, volume du cube) ainsi que les caractères microscopiques qui sont les coordonnées initiales de chaque particule. 
 En effet les masses étant constantes et les chocs étant élastiques il existe une formule liant la vitesse la pression le volume et le nombre de particules. La norme du vecteur vitesse étant donnée grâce aux coordonnées initiales de la particule on lie les caractères microscopiques et macroscopiques du système. 
 
+![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif)
+
 -Le deuxième phénomène physique est la fission nucléaire :
 La fission nucléaire est l'éclatement d'un noyau instable en deux noyaux plus légers et quelques particules élémentaires. Cet éclatement s'accompagne d'un dégagement de chaleur, c'est à dire d'énergie.
 
+![](https://fr.wikipedia.org/wiki/Fichier:Kernspaltung.gif)
 
 Notre modèle s’inspire des deux principes évoqués ci dessus : 
 Dans notre modèle nous avons fait l’hypothèse que les particules dans le système pouvaient former une autre molécule après une collision. 
