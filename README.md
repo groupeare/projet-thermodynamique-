@@ -116,7 +116,7 @@ Pour répondre à cela nous avons créé la fonction déplacement qui va modéli
 	X[i] = X[i]+DX[i]
 	Y[i] = Y[i]+DY[i]
 	
-! [] (gif 2 balles)
+<a href="https://imgflip.com/gif/2ynpvo"><img src="https://i.imgflip.com/2ynpvo.gif" title="made at imgflip.com"/></a>
 
 En répétant cette fonction dans notre programme et en créant une nouvelle liste de N’   éléments (variable choisit par l’utilisateur) on va créer de nouvelles bouler de couleurs qui modéliseront un second élément chimique.  Il est intéressant de remarquer que dans notre programme final nous avons choisit de modéliser une réaction simple avec seulement 2 éléments chimiques mais pour une réaction plus complexe faisant intervenir plus d’éléments il aurait fallu rajouter cette fonction dans le programme pour chaque autre réactif.
 
