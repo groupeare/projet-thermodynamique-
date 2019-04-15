@@ -5,6 +5,8 @@ La formation d'un  nouvel element chimique n'est pas évidente. En effet, il fau
 Pour modeliser ce systeme nous faisons intervenir differentes variables : la pression et la temperature, ces deux facteurs cinetiques vont avoir une influence sur la vitesse des elements chimiques et sur leur probabilités de reagir lorsqu'il y a une collision.
 Nous avons choisi de mettre les elements chimiques dans un espace clos et de considerer que les chocs entre eux et sur les parois sont elastiques c'est a dire qu'il n'y a pas de perte de vitesse. 
 
+# approche theorique 
+
 Dans notre modèle nous considérons un système à deux dimensions dans lequel on place N molécules. Ces molécules constituent un gaz qui n’est pas parfait car il en détient toutes les caractéristiques sauf une.
 En effet un gaz parfait est constitué de particules qui n’interagissent pas entres elles.
 
@@ -35,7 +37,7 @@ En effet les masses étant constantes et les chocs étant élastiques il existe 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif)
 
 
-   Le deuxième phénomène physique est la fission nucléaire :
+  Le deuxième phénomène physique est la fission nucléaire :
 La fission nucléaire est l'éclatement d'un noyau instable en deux noyaux plus légers et quelques particules élémentaires. Cet éclatement s'accompagne d'un dégagement de chaleur, c'est à dire d'énergie.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kernspaltung.gif/208px-Kernspaltung.gif)
@@ -156,14 +158,11 @@ Lorsqu’à l’issue d’une collision un nouvel élément est créé sa durée
 
 		def fission():
     		global Xr,Yr,DXr,DYr,RAYON,LARGEUR,HAUTEUR
-
   		for c in range (len(BallesBleues)):
         	t=random.expovariate(0.2)
         	if tp-0.1<t<tp+0.1:
-
  		Canevas.delete(BallesBleues[c])
         	del BallesBleues[c]
-
 		BallesRouges.append(Canevas.create_oval(Xr[j]-RAYON,Yr[j]-RAYON,Xr[j]+RAYON,Yr[j]+RAYON,width=1,fill='red'))
  	 	BallesVertes.append(Canevas.create_oval(xv[j]-RAYON,yv[j]-RAYON,xv[j]+RAYON,yv[j]+RAYON,width=1,fill='green'))
 
