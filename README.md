@@ -5,6 +5,7 @@ La formation d'un  nouvel élement chimique n'est pas évidente. En effet, il fa
 Pour modéliser ce système nous faisons intervenir differentes variables : la pression et la temperature, ces deux facteurs cinetiques vont avoir une influence sur la vitesse des élements chimiques et sur leurs probabilités de réagir lorsqu'il y a une collision.
 Nous avons choisi de mettre les élements chimiques dans un espace clos et de considérer que les chocs entre eux et sur les parois sont élastiques c'est à dire qu'il n'y a pas de perte de vitesse. 
 
+<a href="https://imgflip.com/gif/2yo3uc"><img src="https://i.imgflip.com/2yo3uc.gif" title="made at imgflip.com"/></a>
 # approche theorique 
 
 Dans notre modèle nous considérons un système à deux dimensions dans lequel on place N molécules. Ces molécules constituent un gaz qui n’est pas parfait car il est constitué de particules qui peuvent interragir entres elles.
