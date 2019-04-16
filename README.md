@@ -232,7 +232,6 @@ Finalement notre système résultant d’un problème de thermodynamique nous a 
 Cependant, notre modèle informatique est contraints à certaines limites, des facteurs internes et externes ne nous permettent pas de pousser à son termes notre modélisation.
 
 ![](https://www.businessinsider.in/The-US-Population-Explosion-In-One-Cool-GIF/articleshow/33409105.cms)
-
 Cependant, notre modèle informatique est contraints à certaines limites, des facteurs internes et externes ne nous permettent pas de pousser à son termes notre modélisation.
 En effet, il ne nous était impossible de prendre en compte l’échelle atomique dans laquelle à lieu les réactions. Ces réactions sont à l’échelle atomique des centaines de fois plus rapides que sur notre modèle et mettent en jeux beaucoup plus d’atomes.
 De plus notre système ne peut agir sans l’aide de son utilisateur si celui-ci ne fixe pas un temps de réaction et ne peut donc pas décrire parfaitement une réaction chimique puisqu’il ne s’arrête pas de lui-même.
