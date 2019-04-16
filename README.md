@@ -1,8 +1,8 @@
 A travers cet atelier de recherche encadré Dynamic nous avons cherché à modeliser l'evolution complexe d'un système composé de plusieurs  élements chimiques dont le déplacement est régit par les lois de la thermodynamique. Pour cela nous avons imaginé deux élements chimiques succeptibles de réagir entre eux pour former un nouvel élement, ces élements chimiques peuvent etre assimilés à n'importe quels atomes ou molecules( par exemple dihydrogene H2 et oxygene O pour former de l'eau H2O).
 
-La formation d'un  nouvel élement chimique n'est pas évidente. En effet, il faut tout d'abord que les deux élements chimiques entre en collision  et il faut de plus que leur collision soit "efficace" car ce n'est pas parce qu'ils entrent en contact qu'ils vont forcement réagir.
+La formation d'un  nouvel élement chimique n'est pas évidente. En effet, il faut tout d'abord que les deux élements chimiques entrent en collision  et il faut de plus que leur collision soit "efficace" car ce n'est pas parce qu'ils entrent en contact qu'ils vont forcement réagir.
 
-Pour modéliser ce système nous faisons intervenir differentes variables : la pression et la temperature, ces deux facteurs cinetiques vont avoir une influence sur la vitesse des élements chimiques et sur leurs probabilités de réagir lorsqu'il y a une collision.
+Pour modéliser ce système nous faisons intervenir différentes variables : la pression et la temperature, ces deux facteurs cinétiques vont avoir une influence sur la vitesse des élements chimiques et sur leurs probabilités de réagir lorsqu'il y a une collision.
 Nous avons choisi de mettre les élements chimiques dans un espace clos et de considérer que les chocs entre eux et sur les parois sont élastiques c'est à dire qu'il n'y a pas de perte de vitesse. 
 
 <a href="https://imgflip.com/gif/2yo3uc"><img src="https://i.imgflip.com/2yo3uc.gif" title="made at imgflip.com"/></a>
