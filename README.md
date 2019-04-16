@@ -34,7 +34,7 @@ Afin de décrire l’évolution de notre système nous nous sommes appuyés sur 
  Dans cette théorie le gaz est parfait et les seuls échanges entre molécules sont des collisions, les particules détiennent des collisions avec les parois du cube ainsi qu’avec les autres particules. 
  
 Les chocs sont tous élastiques, il y a donc lors de l’évolution du système une conservation de l’énergie cinétique. 
-Le cube est issue d’un axe orthonormée X, Y, Z dans lequel chaque particule a des positions initiales Vx, Vy, Vz. La théorie cinétique des gaz parfait met en évidence le fait qu’on peut établir des formules qui lient les caractères macroscopiques (pression, température, volume du cube) ainsi que les caractères microscopiques qui sont les coordonnées initiales de chaque particule. 
+Le cube est issue d’un axe orthonormée X, Y, Z dans lequel chaque particule a des vitesses initiales Vx, Vy, Vz. La théorie cinétique des gaz parfait met en évidence le fait qu’on peut établir des formules qui lient les caractères macroscopiques (pression, température, volume du cube) ainsi que les caractères microscopiques qui sont les coordonnées initiales de chaque particule. 
 En effet les masses étant constantes et les chocs étant élastiques il existe une formule liant la vitesse la pression le volume et le nombre de particules. La norme du vecteur vitesse étant donnée grâce aux coordonnées initiales de la particule on lie les caractères microscopiques et macroscopiques du système. 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif)
@@ -54,7 +54,7 @@ En effet, la pression, un des paramètres fixés par l’observateur au début d
 
 Lorsqu’il y a collision les particules peuvent se coupler et former une molécule, cette molécule va ensuite se séparer selon le phénomène de fission nucléaire, car au départ il existe des électrons dans l’espace.
 
- Ces électrons vont entrainer la fission de la molécule qui elle même en se séparant va rejeter des électrons afin de perpétuer le phénomène de fission nucléaire tout au long de l ‘évolution du système.
+ Ces neutrons vont entrainer la fission de la molécule qui elle même en se séparant va rejeter des neutrons afin de perpétuer le phénomène de fission nucléaire tout au long de l ‘évolution du système.
  Lors de l’éclatement de cette molécule, les deux particules (similaires à celles qui se sont collisionnées) vont apparaître à des points aléatoires dans l’espace avec des vitesses sensiblement différentes pendant un moment pour illustrer le phénomène « d’éclatement », ce qui en résulte est une production d’énergie sous forme thermique.
  
 Ainsi nous remarquons que plus les molécules sont formés après collision plus la chaleur est crée après fission de la même molécule, donc plus la probabilité de formation après collision est importante plus la température est élevée.
