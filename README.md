@@ -154,7 +154,7 @@ Dans le cas contraire cela signifie que les éléments chimiques ont réagis ent
 
 <a href="https://imgflip.com/gif/2ynq67"><img src="https://i.imgflip.com/2ynq67.gif" title="made at imgflip.com"/></a>
 
-Ces deux cas de figures interviennent selon une certaine probabilité déterminer par les facteurs cinétiques choisit au départ.
+Ces deux cas de figures interviennent selon une certaine probabilité déterminé par les facteurs cinétiques choisit au départ.
 
 
 
