@@ -1,3 +1,19 @@
+The goal of our program is to modelize the evolution of chemical elements capable of reacting between them in a closed system.The chemical elements are represented by balls of different colours,the red balls and green balls are the reactants while the blue balls are products.
+The aim is to observe the evolution of our model by using kinetic factors.In the chemistry world,a kinetic factor is a  physical parameter capable of influencing the speed of a chemical transformation.
+We will focus on two factors: pressure and temperature.
+The rise of our environment's temperature  finds its application when we want to accelerate or sometimes to activate a slow transformation even kinetically inert.
+To describe the evolution of our system we used 2 principles or physical phenomenas: The kinetic theory of gases, a theory which combines  the macroscopic characters such as the temperature and the pressure and microscopic as the position and the speed. The second  physical principle use dis nuclear fusion.
+In our model we used a hypothese that the particles in the system could form another molecule after  collision. This formation after collision is governed by a variable probability and given randomly, depending on the kinetic parameters fixed at the start of the experiment.
+Indeed, the pressure, one of the factors fixed by the observer at the beginning of the experiment will determine the initial velocity of each particle and therefore the microscopic characters that are the positions of each particle, the greater the pressure, the greater the agitation of the particles.
+When there is a collision the particles divide and form a molecule, this molecule will then separate according to the phenomenon of nuclear fission, because initially there are electrons in space.
+These neutrons will cause the fission of the molecule itself by separating, it  will release neutrons in order to perpetruate the phenomenon of nuclear fission throughout the evolution of the system. When this molecule bursts, the two particles (similar to those collisioned) will appear at random points in space with substantially different velocities for a moment to illustrate the phenomenon “bursting”, the result is energy production in thermal form.
+Thus we notice that the more molecules are formed after collision and  more heat is created after fission of the same molecule, so the greater the probability of formation after collision,the higher the temperature.
+In order to represent this we decided to leave the choice of temperature and pressure to our observer (at the start), he will then be able to observe the verification of these phenomena while he himself will have chosen the kinetic factors. If the pressure is high the system will be more agitated and the higher the temperature set will be the more the molecules will merge and then crack.
+
+
+
+
+
 A travers cet atelier de recherche encadré Dynamic nous avons cherché à modeliser l'evolution complexe d'un système composé de plusieurs  élements chimiques dont le déplacement est régit par les lois de la thermodynamique. Pour cela nous avons imaginé deux élements chimiques succeptibles de réagir entre eux pour former un nouvel élement, ces élements chimiques peuvent etre assimilés à n'importe quels atomes ou molecules( par exemple dihydrogene H2 et oxygene O pour former de l'eau H2O).
 
 La formation d'un  nouvel élement chimique n'est pas évidente. En effet, il faut tout d'abord que les deux élements chimiques entrent en collision  et il faut de plus que leur collision soit "efficace" car ce n'est pas parce qu'ils entrent en contact qu'ils vont forcement réagir.
