@@ -238,4 +238,4 @@ De plus notre système ne peut agir sans l’aide de son utilisateur si celui-ci
 Pour conclure ce projet nous a permis d'enrichir nos connaissances sur l'étude des systèmes dynamiques et également d'appliquer des notions d'informatiques à des situations du monde réel. Le travail d'équipe fut également très important pour la bonne répartition des tâches et des données à traiter, l'étude d'un système thermodynaique est assez complexe et exige un invistissement de chacun des membres du groupe qui mettra à profits ses qualités. 
 Nos connaissances en chimie nous ont permis de dresser une approche plus abordable sur la théorie des gaz en illustrant celle ci dans un modèle informatique et en dressant à partir de cela notre étude sur un système complexe qui varie au cours du temps.
 
-![](https://giphy.com/gifs/netflix-water-scientist-lIEAKmgFoNlqOgStN5)
+![](https://media.giphy.com/media/lIEAKmgFoNlqOgStN5/giphy.gif)
