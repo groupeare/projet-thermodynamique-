@@ -51,7 +51,7 @@ if 50<=Temperature<100:
     tp = random.uniform(0.4,0.6)
 if 100<=Temperature<150:
     tp = random.uniform(0.6,0.8)
-if 200<=Temperature<150:
+if 150<=Temperature<200:
     tp = random.uniform(0.8,1)
 
 # position initiale
